@@ -3,9 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="CP_1.js"></script>
+    <div id="page-wrapper">
+
+        <h1>User Feedback Form</h1>
+
+        <!-- Main form container -->
+        <form id="feedback-form">
+
+            <!-- Name field -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-field" placeholder="Enter your name"
+                    data-tooltip="Please enter your full name.">
+                <span class="char-count" id="name-count">0 characters</span>
+                <span class="error-msg" id="name-error"></span>
+            </div>
+
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" class="form-field" placeholder="Enter your email"
+                    data-tooltip="Enter a valid email address.">
+                <span class="char-count" id="email-count">0 characters</span>
+                <span class="error-msg" id="email-error"></span>
+            </div>
+
+            <!-- Comments text area -->
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" class="form-field" rows="4" placeholder="Write your feedback here..."
+                    data-tooltip="Share your thoughts or suggestions."></textarea>
+                <span class="char-count" id="comments-count">0 characters</span>
+                <span class="error-msg" id="comments-error"></span>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="submit-btn">Submit Feedback</button>
+        </form>
+
+        <!-- Tooltip element that follows the mouse -->
+        <div id="tooltip" class="tooltip"></div>
+
+        <!-- Container where submitted feedback entries show up -->
+        <h2>Submitted Feedback</h2>
+        <div id="feedback-display"></div>
+
+    </div>
+
+    <script src="cp_1.js"></script>
 </body>
 </html>
